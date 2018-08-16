@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Col, ControlLabel, FormControl, Button, Well } from 'react-bootstrap';
 
-export class AddContactForm extends Component {
-    displayName = AddContactForm.name
+export class NewContactForm extends Component {
+    displayName = NewContactForm.name
 
     constructor(props) {
         super(props);
