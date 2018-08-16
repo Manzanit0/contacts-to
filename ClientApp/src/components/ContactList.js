@@ -44,7 +44,7 @@ export class ContactList extends Component {
 
     return (
       <div>
-        <h1>Contact List</h1>
+        <h1>Contacts</h1>
         <p>This is a list of all the contacts in the system.</p>
         {contents}
       </div>

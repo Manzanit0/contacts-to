@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './NavMenu.css';
+import { ContactsCountBadge } from './ContactsCountBadge';
 
 export class NavMenu extends Component {
   displayName = NavMenu.name
@@ -23,14 +24,14 @@ export class NavMenu extends Component {
                 <Glyphicon glyph='home' /> Home
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/counter'}>
-              <NavItem>
-                <Glyphicon glyph='education' /> Counter
-              </NavItem>
-            </LinkContainer>
             <LinkContainer to={'/contactlist'}>
               <NavItem>
-                <Glyphicon glyph='th-list' /> Contact List
+                <Glyphicon glyph='th-list' /> Contact List <ContactsCountBadge />
+              </NavItem>
+            </LinkContainer>
+            <LinkContainer to={'/new'}>
+              <NavItem>
+                <Glyphicon glyph='plus' /> New Contact
               </NavItem>
             </LinkContainer>
           </Nav>
