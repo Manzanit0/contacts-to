@@ -1,3 +1,4 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 ForEach($i in 1..100){
     $data = @{
@@ -12,6 +13,8 @@ ForEach($i in 1..100){
         summary = "asdfadsfadsfadsfasdfasdfasdfasdfasdfasdf dsfasdf adsfasdf adsfasdf asdfads fasdfadsf"
         email = "asdfasdf@adfsasdfa.com"
     }
+
     $json = ConvertTo-Json $data
-Invoke-WebRequest -Uri "https://localhost:8001/api/contacts" -Method "POST" -Body $json -ContentType "application/json" 
+
+    Invoke-WebRequest -Uri "https://localhost:8001/api/contacts" -Method "POST" -Body $json -ContentType "application/json" 
 }
