@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export class ContactList extends Component {
-  displayName = ContactList.name
+export class ContactsTable extends Component {
+  displayName = ContactsTable.name
 
   constructor(props) {
     super(props);
@@ -14,7 +14,7 @@ export class ContactList extends Component {
       });
   }
 
-  static renderForecastsTable(contacts) {
+  static renderTableResult(contacts) {
     return (
       <table className='table'>
         <thead>
@@ -40,12 +40,10 @@ export class ContactList extends Component {
   render() {
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
-      : ContactList.renderForecastsTable(this.state.contacts);
+      : ContactsTable.renderTableResult(this.state.contacts);
 
     return (
       <div>
-        <h1>Contacts</h1>
-        <p>This is a list of all the contacts in the system.</p>
         {contents}
       </div>
     );

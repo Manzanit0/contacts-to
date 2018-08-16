@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './NavMenu.css';
-import { ContactsCountBadge } from './ContactsCountBadge';
+import { ContactsCountBadge } from './contacts/ContactsCountBadge';
 
 export class NavMenu extends Component {
   displayName = NavMenu.name
