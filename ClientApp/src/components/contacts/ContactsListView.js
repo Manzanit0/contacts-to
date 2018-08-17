@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { ContactsTable } from './ContactsTable';
 import NewContactModal from './NewContactModal';
-import Panel from 'react-bootstrap/lib/Panel';
+
 
 export class ContactsListView extends Component {
     displayName = ContactsListView.name

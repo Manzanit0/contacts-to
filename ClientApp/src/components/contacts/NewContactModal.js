@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, Glyphicon } from 'react-bootstrap';
+import { Modal, Glyphicon } from 'react-bootstrap';
 import { NewContactForm } from "./NewContactForm";
 
 export default class NewContactModal extends Component {

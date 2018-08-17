@@ -24,16 +24,14 @@ export class NavMenu extends Component {
                 <Glyphicon glyph='home' /> Home
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/contactlist'}>
+            <LinkContainer to={'/contacts'}>
               <NavItem>
-                <Glyphicon glyph='th-list' /> Contact List <ContactsCountBadge />
+                <Glyphicon glyph='th-list' /> Addressbook <ContactsCountBadge />
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/new'}>
-              <NavItem>
-                <Glyphicon glyph='plus' /> New Contact
-              </NavItem>
-            </LinkContainer>
+            <NavItem>
+                <Glyphicon glyph='cog' /> Settings
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

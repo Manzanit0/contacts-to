@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ContactViewLink } from './ContactViewLink';
 
 export class ContactsTable extends Component {
   displayName = ContactsTable.name
@@ -27,7 +28,9 @@ export class ContactsTable extends Component {
         <tbody>
           {contacts.map(contact =>
             <tr key={contact.username}>
-              <td>{contact.name}</td>
+              <td>
+                <ContactViewLink contact={contact} />
+              </td>
               <td>{contact.username}</td>
               <td>{contact.email}</td>
             </tr>
