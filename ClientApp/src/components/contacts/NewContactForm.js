@@ -13,7 +13,7 @@ export class NewContactForm extends Component {
         };
     }
 
-    handleClick() {
+    handleClick = () => {
         var opts = {
             method: 'POST',
             body: JSON.stringify({
@@ -66,7 +66,7 @@ export class NewContactForm extends Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                            <Button type="submit" onClick={(event) => this.handleClick(event)}>Add</Button>
+                            <Button type="submit" onClick={(evt) => this.handleClick()}>Add</Button>
                         </Col>
                     </FormGroup>
                 </Form>
