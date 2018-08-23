@@ -15,7 +15,15 @@ namespace contacts_to.Controllers
         // GET api/contacts
         [HttpGet]
         public ActionResult<IEnumerable<Contact>> Get() => Storage.ContactsCache;
-       
+
+        [HttpGet]
+        [Route("[action]/{id:int}")]
+        public ActionResult<Contact> GetById(int id) => Storage.ContactsCache.Where(x => x.id == id).FirstOrDefault();
+
+        [HttpGet]
+        [Route("[action]/{email}")]
+        public ActionResult<Contact> GetByEmail(string email) => Storage.ContactsCache.Where(x => x.email == email).FirstOrDefault();
+
         // POST api/contacts
         [HttpPost]
         public void Post([FromBody] Contact value)
